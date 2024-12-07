@@ -140,18 +140,16 @@ nav {
   gap: 2rem;
   padding: 2rem;
   background-color: var(--primary-color-dark);
-  transition: transform 0.5s ease-in-out;
-  z-index: 1; /* Ensure it's above other elements */
-  transform: translateY(100%); /* Initially hidden */
+  transition: transform 0.5s;
+  z-index: -1;
 }
 
 .nav__links.open {
-  transform: translateY(0); /* Show when open */
+  transform: translateY(100%);
 }
 
 .nav__links a {
   color: var(--white);
-  transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 .nav__links a:hover {
@@ -159,21 +157,7 @@ nav {
 }
 
 .nav__btns {
-  display: none; /* Hidden by default */
-}
-
-/* Show the button on larger screens */
-@media (min-width: 768px) {
-  .nav__btns {
-    display: block; /* Show the button on larger screens */
-  }
-}
-
-/* Optional: Adjustments for smaller screens */
-@media (max-width: 768px) {
-  .nav__links {
-    padding: 1rem; /* Adjust padding for smaller screens */
-  }
+  display: none;
 }
 
 .header__container {
